@@ -26,5 +26,5 @@ double LaunchHumanCannonball(double initial_velocity, double launch_angle);
 
 // Create a Constant named kPI which is initialized to 3.1415927
 // CODE HERE
-
+double const kPI = 3.1415927;
 #endif

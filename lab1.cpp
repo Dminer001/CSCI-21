@@ -27,7 +27,7 @@ using std::string;
       cout << "Get ready to have some fun" << endl;
         
     //CODE HERE
- ./   return string("");
+    return string("");
 }
  
 void FirstLab() {
