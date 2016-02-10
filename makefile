@@ -11,3 +11,6 @@ lab5: lab_5.cpp lab_5.h
 #creates the unit test object file
 lab_5_unit_test: lab_5_unit_test.cpp
 	g++ -Wall -g -c lab_5_unit_test.cpp
+
+clean:
+	rm *.o lab5

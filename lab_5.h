@@ -31,7 +31,7 @@ void Hello();
  * @param const string& - The string to display to stdout
  */
 // CODE HERE (FUNCTION PROTOTYPE)
-string PrintMessage(const string input);
+ string PrintMessage(const string& kInput);
 /*
  * Function Name: GetAnswer
  *

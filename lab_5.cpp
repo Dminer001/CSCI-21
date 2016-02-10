@@ -12,13 +12,12 @@
    // prints Hello world! to std::cout
     void Hello() {
         cout << "Hello world!";
-}
-
+    }
     
-    
-    string PrintMessage(const string input) {
-        cout << input;
-        return input;
+    // prints parameter to cout and returns it couldnt get it to work as a void function this one feels iffy to me
+    string PrintMessage(const string& kInput) {
+        cout << kInput;
+        return kInput;
     }
     // returns the answer to the ultimate question
     int GetAnswer() {
@@ -35,6 +34,7 @@
         return second;
     } 
     
+    // takes 2 parameters if the second is true shifts the first to uppercase
     string BuildMessage(string message, bool upper) {
         string built = "Message: ";
         
