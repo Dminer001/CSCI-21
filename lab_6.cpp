@@ -45,7 +45,14 @@ string PrepareForDisplay(int values[], int size, char separator) {
  * @return bool - true if value is found in the array, otherwise false
  */
 bool HasValue(int values[], int size, int value) {
-    return true;
+    int i = 0;
+    bool present = false;
+    for (i=0; i < size; i++) {
+        if ( values[i] == value ) 
+        present = true;
+    }
+    
+    return present;
 }
 
 /*
@@ -59,7 +66,13 @@ bool HasValue(int values[], int size, int value) {
  *               to false. if index is invalid, returns 0 and sets error to true
  */
 int ValueAt(int values[], int size, int index, bool &error) {
-    return size;
+    if (index < size) {
+        error = false;
+        return values[index];
+    } else 
+    error = true;
+    
+    return 0;
 }
 
 /*
@@ -69,7 +82,13 @@ int ValueAt(int values[], int size, int index, bool &error) {
  * @return int - The sum of the values in the array
  */
 int Sum(int values[], int size) {
-    return size;
+    int sum = 0;
+    for (int i = 0; i < size; i++ ){
+        sum += values[i];
+    }
+    
+    
+    return sum;
     
 }
 
@@ -83,5 +102,12 @@ int Sum(int values[], int size) {
  * @return bool - true if the swap was successful, otherwise false
  */
 bool SwapValues(int values[], int size, int index1, int index2) {
+    if ((index1 < size) && (index2 < size) && (index1 >= 0) && (index2 >=0)) {
+    int temp = values[index1];
+    values[index1] = values[index2];
+    values[index2] = temp;
+    
     return true;
+    } else 
+    return false;
 }
