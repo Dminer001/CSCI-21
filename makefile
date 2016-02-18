@@ -1,16 +1,16 @@
 #creates the executable from both object files
 
-lab6test: lab_6_unit_test.o lab_6.o
-	g++ -Wall -g -o lab6test lab_6.o lab_6_unit_test.o
+assignment1test: assignment_1_unit_test.o assignment_1.o
+	g++ -Wall -g -o assignment1test assignment_1.o assignment_1_unit_test.o
 
 #creates the lab4 object file
-lab6: lab_6.cpp lab_6.h
-	g++ -Wall -g -c lab_6.cpp
+assignment1: assignment_1.cpp assignment_1.h
+	g++ -Wall -g -c assignment_1.cpp
 
 
 #creates the unit test object file
-lab_6_unit_test: lab_6_unit_test.cpp
-	g++ -Wall -g -c lab_6_unit_test.cpp
+assignment_1_unit_test: assignment_1_unit_test.cpp
+	g++ -Wall -g -c assignment_1_unit_test.cpp
 
 clean:
-	rm *.o lab6test
+	rm *.o assignment1test
