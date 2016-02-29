@@ -23,4 +23,4 @@ lab_8_unit_test: lab_8_unit_test.cpp
 
 
 clean:
-	rm *.o lab1test
+	rm *.o lab7test lab8test
