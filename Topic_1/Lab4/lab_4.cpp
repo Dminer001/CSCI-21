@@ -43,7 +43,7 @@ char StringToChar(string value) {
   } else 
   cvalue = value[0];
   return cvalue;
-}
+} 
 
 /*
  * Useful when accepting input from stdin using the getline function.
