@@ -21,6 +21,6 @@ lab8test: lab_8_unit_test.o lab_7.o
 lab_8_unit_test: lab_8_unit_test.cpp
 	g++ -Wall -g -c lab_8_unit_test.cpp
 
-
-clean: 
+ 
+clean:   
 	rm *.o lab7test lab8test   
