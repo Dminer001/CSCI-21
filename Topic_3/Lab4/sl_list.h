@@ -23,6 +23,7 @@ public:
 /**
  * Constructor
  * sets head_ to NULL
+ * sets tail_ to NULL
  * sets size_ to 0
  */
 SLList();
@@ -41,10 +42,35 @@ SLList();
 void InsertHead(int contents);
 
 /**
+ * creates a new dynamic SLNode with the contents of 
+ * the parameter and attaches as the new tail of the list
+ * @param int contents
+ */
+void InsertTail(int contents);
+
+/**
  * removes the head node from the list,
  * or does nothing if the list is empty
  */
 void RemoveHead();
+
+/**
+ * removes the tail node from the list,
+ * or does nothing if the list is empty
+ */
+void RemoveTail();
+
+/**
+ * Returns the contents of the head node
+ * if the list is empty returns 0
+ */
+ int GetHead() const;
+ 
+/**
+ * Returns the contents of the tail node
+ * if the list is empty returns 0
+ */
+int GetTail() const;
 
 /**
  *  clears the entire contents of the list,
@@ -71,6 +97,11 @@ private:
  *  points to the first node in a singly-linked list
  */
 SLNode* head_;
+
+/**
+ * points to the last node in the list
+ */
+SLNode* tail_;
   
   
 /**

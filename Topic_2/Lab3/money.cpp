@@ -95,6 +95,14 @@ const Money operator +(const Money& amount1, const Money& amount2) {
   return false;
   }
   
+  const operator =(const line &element1, const line &element2)
+  {
+    //set element1 maxcustomers = to element2 maxcustomers
+    element1.maxCustomers = element2.maxCustomers;
+    
+    //set element1 
+  }
+  
    /*
    * Overload of unary - operator. This is a friend function.
    * @param Money amount - The object to negate
