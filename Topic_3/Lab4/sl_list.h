@@ -1,7 +1,7 @@
 /*
  * Name        : sl_list.h
  * Author      : Dustin Miner
- * Description : Header File for topic 3 lab 3
+ * Description : Header File for topic 3 lab 4
  */
 
 #ifndef LIST_H

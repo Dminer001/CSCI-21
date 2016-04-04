@@ -1,7 +1,7 @@
 /*
  * Name        : sl_list.cpp
  * Author      : Dustin Miner
- * Description :implementation File for topic 3 lab 3
+ * Description :implementation File for topic 3 lab 4
  */
  #include "sl_list.h"
 
