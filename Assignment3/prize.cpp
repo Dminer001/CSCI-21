@@ -254,6 +254,7 @@ Prize Box::getPrize(unsigned int location)
  */
  Prize Box::removePrize(unsigned int location)
  {
+     
      if (prizes_[location] == scratch_)
      {
      return scratch_;

@@ -39,9 +39,9 @@ unsigned int DLList::getSize() const
 /**
  * creates a new dynamic DLNode with the contents of 
  * the parameter and attaches as the new head of the list
- * @param int contents
+ * @param string contents
  */
-void DLList::pushFront(int contents)
+void DLList::pushFront(string contents)
 {
     DLNode* temp = new DLNode(contents);
     temp->setNext(head_);
@@ -55,9 +55,9 @@ void DLList::pushFront(int contents)
 /**
  * creates a new dynamic DLNode with the contents of 
  * the parameter and attaches as the new tail of the list
- * @param int contents
+ * @param string contents
  */
-void DLList::pushBack(int contents)
+void DLList::pushBack(string contents)
 {
     if (head_ != NULL)
     {
@@ -80,12 +80,12 @@ void DLList::pushBack(int contents)
 /**
  * Insert function that creates a new node and
  * inserts it in an appropriate location in the list.
- *@param int contents the contents of the new node.
+ *@param string contents the contents of the new node.
  */
-void DLList::insert(int contents)
+void DLList::insert(string contents)
 {
     //Checks if head is null or contents is < head_->getContents();
-    if (head_ == NULL || head_->getContents() > contents)
+    if (head_ == NULL)
     {
         pushFront(contents);
     } else if ( tail_->getContents() < contents)
@@ -119,7 +119,7 @@ void DLList::insert(int contents)
  * Returns the contents of the head node
  * if the list is empty returns 0
  */
-int DLList::getFront() const
+string DLList::getFront() const
 {
     //checks for empty list
     if (size_ == 0)
@@ -131,10 +131,19 @@ int DLList::getFront() const
 }
 
 /**
+ * returns the pointer to the head of the list
+ * @return head_
+ */
+DLNode* DLList::getHead() {
+    while (head_ != NULL)
+    return head_;
+}
+
+/**
  * Returns the contents of the tail node
  * if the list is empty returns 0
  */
-int DLList::getBack() const
+string DLList::getBack() const
 {
     //checks for empty list
     if (size_ == 0)
@@ -149,7 +158,7 @@ int DLList::getBack() const
  * returns true if parameter is in the list
  * else returns false
  */
- bool DLList::get(int contents)
+ bool DLList::get(string contents)
  {
      DLNode* temp = head_;
      while (temp != tail_)
@@ -212,13 +221,13 @@ void DLList::popBack()
 
 /**
  * Removes first occurence of the supplied data
- * @param int contents data to compare
+ * @param string contents data to compare
  * traverses the list comparing contents
  * @return true if complete
  * @return false if empty or data does not exist
  */
  
- bool DLList::removeFirst(int contents)
+ bool DLList::removeFirst(string contents)
  {
      //returns false for empty list
      if (head_ == NULL)
@@ -262,13 +271,13 @@ void DLList::popBack()
   * Removes all occurences of the parameter
   * does nothing if not in list
   */
-  bool DLList::removeAll(int contents)
+  bool DLList::removeAll(string contents)
   {
        //returns false for empty list
      if (head_ == NULL)
      {
          return false;
-         // uses popBack() if tail == contents
+       // uses popBack() if tail == contents
      } else if (tail_->getContents() == contents)
      {
          popBack();
@@ -333,9 +342,9 @@ void DLList::Clear()
  * NUM1, NUM2, ..., LASTNUM
  * returns the empty string on an empty list (i.e. returns "")
  */
-ostream& operator <<(ostream &out, const DLList &contents) 
+/*ostream& operator <<(ostream &out, const DLList &list) 
 {
-    DLNode* temp = contents.head_;
+    DLNode* temp = list.head_;
     if (temp == NULL)
     out << "";
     else
@@ -354,6 +363,24 @@ ostream& operator <<(ostream &out, const DLList &contents)
         out << temp->getContents();
         temp = temp->getNext();
     }*/
+    string DLList::ToString() const
+{
+    if (head_ == NULL)
+    return "";
+    stringstream ss;
+        DLNode* temp = head_;
+        
+            while (temp != NULL)
+            {
+                ss << temp->getContents();
+                if (temp->getNext() != NULL)
+                ss << ", ";
+                temp = temp->getNext();
+            }
     
-    return out;
+    
+    return ss.str();
 }
+    
+    
+    

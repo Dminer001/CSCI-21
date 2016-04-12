@@ -45,14 +45,20 @@ unsigned int getSize() const;
  * the parameter and attaches as the new head of the list
  * @param int head
  */
-void pushFront(int contents);
+void pushFront(string contents);
+
+/**
+ * returns the pointer to the head of the list
+ * @return head_
+ */
+DLNode* getHead();
 
 /**
  * creates a new dynamic DLNode with the contents of 
  * the parameter and attaches as the new tail of the list
  * @param int contents
  */
-void pushBack(int contents);
+void pushBack(string contents);
 
 /**
  * Insert function that creates a new node and
@@ -60,29 +66,25 @@ void pushBack(int contents);
  *@param int contents the contents of the new node.
  */
  
-void insert(int contents);
-
- 
-
-
+void insert(string contents);
 
 /**
  * Returns the contents of the head node
  * if the list is empty throw "LIST EMPTY"
  */
- int getFront() const;
+string getFront() const;
 
 /**
  * Returns the contents of the tail node
  * if the list is empty throw "LIST EMPTY"
  */
-int getBack() const;
+string getBack() const;
 
 /**
  * returns true if parameter is in the list
  * else returns false
  */
- bool get(int contents);
+ bool get(string contents);
 
 /**
  * removes the head node from the list,
@@ -104,13 +106,13 @@ void popBack();
  * @return false if empty or data does not exist
  */
  
- bool removeFirst(int contents);
+ bool removeFirst(string contents);
  
  /**
   * Removes all occurences of the parameter
   * does nothing if not in list
   */
-  bool removeAll(int contents);
+  bool removeAll(string contents);
 
 /**
  * clears the entire contents of the list,
@@ -125,10 +127,9 @@ void Clear();
  * NUM1,NUM2,...,LASTNUM
  * returns the empty string on an empty list (i.e. returns "")
  */
-friend ostream& operator <<(ostream &out, const DLList &contents);
+//friend ostream& operator <<(ostream &out, const DLList &contents);
+string ToString() const; 
  
-private:
-
 /**
  *  points to the first node in a singly-linked list
  */

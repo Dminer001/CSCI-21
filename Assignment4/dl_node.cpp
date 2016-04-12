@@ -14,7 +14,7 @@ DLNode::DLNode()
 {
     previous_node_ = NULL;
     next_node_ = NULL;
-    contents_ = 0;
+    contents_ = "";
 }
 
 /**
@@ -22,7 +22,7 @@ DLNode::DLNode()
  * @param int contents sets contents_ to value
  * sets next_node_ to NULL
  */
-DLNode::DLNode(int contents)
+DLNode::DLNode(string contents)
 {
     contents_ = contents;
     next_node_ = NULL;
@@ -42,7 +42,7 @@ DLNode::~DLNode()
  * Mutator for contents_
  * @param int contents sets contents_ to value
  */
-void DLNode::setContents(int contents)
+void DLNode::setContents(string contents)
 {
     contents_ = contents;
 }
@@ -51,7 +51,7 @@ void DLNode::setContents(int contents)
  * Accessor for contents_
  * @return contents_
  */
-int DLNode::getContents() const
+string DLNode::getContents() const
 {
     return contents_;
 }

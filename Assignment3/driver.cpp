@@ -92,7 +92,7 @@
              break;
              
              case 3:
-             for (unsigned int i = 0; i < myBox.getPrizeCount(); i++)
+             for (unsigned int i = 0; i < myBox.getPrizeCapacity(); i++)
              {
                  cout << "Prize " <<  i + 1 << " " << myBox.getPrize(i).getPrizeName() << " Value $" << myBox.getPrize(i).getPrizeValue() << endl;
              }
@@ -139,7 +139,7 @@
                      cin >> cont;
                  }
                  else
-                 myBox.removePrize(number);
+                 myBox.removePrize(number - 1);
                  break;
              }
              break;

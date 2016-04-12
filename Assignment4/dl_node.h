@@ -34,7 +34,7 @@ DLNode();
  * sets next_node_ to NULL
  * sets previous_node_ to NULL
  */
-DLNode(int contents);
+DLNode(string contents);
 
 /**
  * destructor
@@ -46,13 +46,13 @@ virtual ~DLNode();
  * Mutator for contents_
  * @param int contents sets contents_ to value
  */
-void setContents(int contents);
+void setContents(string contents);
 
 /**
  * Accessor for contents_
  * @return contents_
  */
-int getContents() const;
+string getContents() const;
 
 /**
  * Mutator for next_node_
@@ -95,6 +95,6 @@ DLNode* previous_node_;
 /**
  * stores the data contents of a DLNode
  */
- int contents_;
+ string contents_;
 };
 #endif
