@@ -94,7 +94,8 @@
              case 3:
              for (unsigned int i = 0; i < myBox.getPrizeCapacity(); i++)
              {
-                 cout << "Prize " <<  i + 1 << " " << myBox.getPrize(i).getPrizeName() << " Value $" << myBox.getPrize(i).getPrizeValue() << endl;
+                 cout << "Prize " <<  i + 1 << " " << myBox.getPrize(i).getPrizeName() << " Value $" 
+                 << myBox.getPrize(i).getPrizeValue() << endl;
              }
              cout << "Enter any key to continue\n";
              cin >> cont;
@@ -125,7 +126,7 @@
                  
                  case 2:
                  cout << "which prize would you like to remove?\n";
-                 for (unsigned int i = 0; i < myBox.getPrizeCount(); i++)
+                 for (unsigned int i = 0; i < myBox.getPrizeCapacity(); i++)
                  {
                      cout << "Prize " <<  i + 1 << " " << myBox.getPrize(i).getPrizeName() 
                      << " Value $" << myBox.getPrize(i).getPrizeValue() << endl;

@@ -2,7 +2,7 @@
 assign4test: driver.o dl_list.o dl_node.o
 	g++ -Wall -g -o assign4test dl_list.o dl_node.o driver.o
 
-#creates the drive object file
+#creates the driver object file
 driver: driver.cpp
 	g++ -Wall -g -c driver.cpp
 	

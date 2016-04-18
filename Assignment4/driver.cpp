@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
            fin >> line;
            if (!is_number(line))
            {
-               myList.insert(line);
+               myList.pushFront(line);
                //myList.insert(line);
                cout << "the players are:\n";
                //cout << DLList(myList);

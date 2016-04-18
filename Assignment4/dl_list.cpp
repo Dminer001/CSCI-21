@@ -98,7 +98,7 @@ void DLList::insert(string contents)
         //creates iterator and newnode
         DLNode* iterator;
         iterator = head_;
-        while (iterator->getNext() != NULL && contents > iterator->getNext()->getContents())
+        while (iterator->getNext() != tail_ && contents > iterator->getNext()->getContents())
         {
         iterator = iterator->getNext();
         }
