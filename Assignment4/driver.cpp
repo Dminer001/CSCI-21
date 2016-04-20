@@ -38,20 +38,21 @@ int main(int argc, char* argv[])
            return false;
            
        } else
-       do
+      while (!is_number(line))
        {
            fin >> line;
-           if (!is_number(line))
-           {
+          // if (!is_number(line))
+         //  {
                myList.pushFront(line);
                //myList.insert(line);
-               cout << "the players are:\n";
+              // cout << "the players are:\n";
                //cout << DLList(myList);
               //cout << myList.ToString();
              // cout << myList.getFront();
             //  cout << myList.head_->getNext()->getContents();
-           } else
-           {
+           }// else
+          do 
+          {
                roundLength = atoi(line.c_str());
                iterator = myList.head_;
                for (int i = 1; i < roundLength; i++)
@@ -61,11 +62,11 @@ int main(int argc, char* argv[])
                name = iterator->getContents();
                myList.removeFirst(name);
                iterator = myList.head_;
-           }
+           cout << "Moving on to the next round" << endl;+
            
-               iterator = myList.head_;
            
-           cout << "Moving on to the next round" << endl;
+              // iterator = myList.head_;
+           
         //  cout << DLList(myList);
        cout << myList.ToString();
         cout << "Enter to continue\n";
