@@ -70,7 +70,7 @@ TEST_CASE("Adding to the Chest") {
   }
   cout << "Chest Contents: " << chest << endl << endl;
 
-  chest.InsertItem(testItems[3], 2);
+ chest.InsertItem(testItems[3], 2);
   SECTION("InsertItem(silver, 2)") {
     CHECK(chest.GetSize() == 4);
     CHECK(chest.Empty() == false);
@@ -78,7 +78,7 @@ TEST_CASE("Adding to the Chest") {
   }
   cout << "Chest Contents: " << chest << endl << endl;
 
-  chest.InsertItem(testItems[4], 10);
+ chest.InsertItem(testItems[4], 10);
   SECTION("InsertItem(noname, 10)") {
     CHECK(chest.GetSize() == 5);
     CHECK(chest.Empty() == false);
