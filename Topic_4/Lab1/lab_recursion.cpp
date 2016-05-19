@@ -17,18 +17,14 @@
 stringstream decToBin(int num)
 {
     stringstream ss;
-    string bin;
-  //  while (num > 0)
-    //{
-	if (num > 1) //note this makes the base case num = 0
-	{
-		decToBin(num/2); //recursive call
+    if (num > 1) //note this makes the base case num = 0
+    {
+		 ss << decToBin(num/2); //recursive call
 	}
 
-	 bin + (num%2); //outputs in correct order
-	// ss << bin;
-    //}
-//	 return ss.str();
+
+
+     return ss.str();
 }
 
 
