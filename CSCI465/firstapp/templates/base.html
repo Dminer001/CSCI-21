@@ -1,0 +1,59 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/foundation.css" %}">
+    <link rel="stylesheet" href="{% static "css/app.css" %}">
+    <style>
+    body.dark-mode {
+      background-color: #111;
+      color: #eee;
+    }
+    body.dark-mode a {
+      color: #111;
+    }
+    body.dark-mode button {
+      background-color: #eee;
+      color: #111;
+    }
+
+    body.light-mode {
+      background-color: #eee;
+      color: #111;
+    }
+    body.light-mode a {
+      color: #111;
+    }
+    body.light-mode button {
+      background-color: #111;
+      color: #eee;
+    }
+
+
+    </style>
+  </head>
+<body translate="no" id="body" class=light-mode>
+  {% block content %}{% endblock %}
+  <script src="{% static "js/vendor/jquery.js" %}"></script>
+  <script src="{% static "js/vendor/what-input.js" %}"></script>
+  <script src="{% static "js/vendor/foundation.js" %}"></script>
+  <script src="{% static "js/app.js" %}"></script>
+
+  {% block scripts %}
+  <script>
+  function toggleDarkLight() {
+    var body = document.getElementById("body");
+    var currentClass = body.className;
+    body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+  }
+    //# sourceURL=harlemsquirrel.github.io/css/javascript/2017/01/31/dark-light-mode-switcher.html
+
+  </script>
+  {% endblock %}
+</body>
+</html>
