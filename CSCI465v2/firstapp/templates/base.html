@@ -1,32 +1,28 @@
 <!doctype html>
 {% load static %}
 <html class="no-js" lang="en" dir="ltr">
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static "css/foundation.css" %}">
-    <link rel="stylesheet" href="{% static "css/app.css" %}">
-
-<!-- Page layout and nav bar taken from https://foundation.zurb.com/building-blocks/ -->
-    <div class="app-dashboard shrink-medium">
-      <div class="row expanded app-dashboard-top-nav-bar">
-
-
-        <!-- Unused color changing button <button type="button" class="warning button" onclick="toggleDarkLight()">Toggle Color Scheme</button>  -->
-        <header class="sticky-shrinknav-header">
-          <ul class="menu align-center sticky-shrinknav-menu">
-            <li>
-              <div class="columns shrink app-dashboard-top-bar-actions">
-                <!-- <button href="/" class="button hollow">Home</button> -->
-                <a href="/" height="30" width="30" alt="">Home<i class="fa fa-info-circle"></i></a>
-              </div>
-            </li>
-            <li>
-              <div class="columns shrink app-dashboard-top-bar-actions">
-                <!-- <button href="#" class="button hollow">About</button> -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static "css/foundation.css" %}">
+  <link rel="stylesheet" href="{% static "css/app.css" %}">
+  <!-- Page layout and nav bar taken from https://foundation.zurb.com/building-blocks/ -->
+  <div class="app-dashboard shrink-medium">
+    <div class="row expanded app-dashboard-top-nav-bar">
+      <!-- Unused color changing button <button type="button" class="warning button" onclick="toggleDarkLight()">Toggle Color Scheme</button>  -->
+      <header class="sticky-shrinknav-header">
+        <ul class="menu align-center sticky-shrinknav-menu">
+          <li>
+            <div class="columns shrink app-dashboard-top-bar-actions">
+              <!-- <button href="/" class="button hollow">Home</button> -->
+              <a href="/" height="30" width="30" alt="">Home<i class="fa fa-info-circle"></i></a>
+            </div>
+          </li>
+          <li>
+            <div class="columns shrink app-dashboard-top-bar-actions">
+              <!-- <button href="#" class="button hollow">About</button> -->
                 <a href="/about/" height="30" width="30" alt="">About<i class="fa fa-info-circle"></i></a>
               </div>
             </li>

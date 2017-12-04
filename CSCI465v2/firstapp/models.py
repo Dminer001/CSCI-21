@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -8,8 +9,11 @@ class suggestion(models.Model):
     suggestion = models.CharField(max_length=141)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     authored = models.DateTimeField(auto_now=True)
+    CHOICES = (('1', 'LFG',), ('2', 'LFM',),('1', 'WTB',), ('2', 'WTS',))
+    choice_field = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
     image = models.ImageField(max_length=144, upload_to='uploads/%Y/%m/%d/')
     idescription = models.CharField(max_length=144)
+
     def __str__(self):
         return self.suggestion
 

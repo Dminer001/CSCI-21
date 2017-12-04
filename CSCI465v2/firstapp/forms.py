@@ -8,6 +8,8 @@ from .models import *
 class suggestion_form(forms.Form):
     suggestion = forms.CharField(label='Post Title', max_length=140)
     image=forms.ImageField(label="Image File")
+    CHOICES = (('1', 'LFG',), ('2', 'LFM',),('1', 'WTB',), ('2', 'WTS',))
+    choice_field = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
     image_description=forms.CharField(label="Image Description", max_length=144)
 
     def save(self, request , commit=True):

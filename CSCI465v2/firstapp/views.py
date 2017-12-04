@@ -17,6 +17,7 @@ def index(request):
     for suggest in suggestions:
         data = {}
         data["suggestion"]=suggest.suggestion
+        data["choice_field"]=suggest.choice_field
         data["image"]=suggest.image
         data["idescription"]=suggest.idescription
         data["author"]=suggest.author
