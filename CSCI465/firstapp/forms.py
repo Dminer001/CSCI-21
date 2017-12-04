@@ -7,6 +7,8 @@ from .models import *
 
 class suggestion_form(forms.Form):
     suggestion = forms.CharField(label='Suggestion', max_length=140)
+    CHOICES = (('1', 'LFG',), ('2', 'LFM',),('1', 'WTB',), ('2', 'WTS',))
+    choice_field = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
 
 class LoginForm(AuthenticationForm):
     username=forms.CharField(
